@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card hover Animation</title>
+  <style>
+          * { 
+  margin : 0;
+  padding: 0;
+  box-sizing : border-box;
+  font-family : "Poppins", sans-serif;
+}
+body {
+  display : flex;
+  align-items : center;
+  justify-content : center;  
+  background-color: #14747a;
+  height: 100vh;
+}
+
+.container {
+  position : relative;
+  display : flex;
+  align-items : center;
+  justify-content : center;
+  padding : 30px;  
+}
+
+ .card {
+  position: relative;
+  max-width : 300px;
+  height : 215px;  
+  background-color : #fff;
+  margin : 30px 10px;
+  padding : 20px 15px;
+  display : flex;
+  flex-direction : column;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+  transition : 0.3s ease-in-out;
+  border-radius : 15px;
+  &:hover{
+    height: 320px;
+  }
+}
+
+.image {
+  position : relative;
+  width : 260px;
+  height : 220px;
+  top : -40%;
+  left: 5.5px;
+  box-shadow : 0 5px 20px rgba(0,0,0,0.2);
+  z-index : 1;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image img {
+  width: 350px;
+  border-radius : 50px;
+}
+
+.content {
+  position : relative;
+  top : -140px;
+  padding : 10px 15px;
+  color : #111;
+  text-align : center;
+  
+  visibility : hidden;
+  opacity : 0;
+  transition : 0.3s ease-in-out;
+    
+}
+
+.card:hover .content {
+   margin-top : 30px;
+   visibility : visible;
+   opacity : 1;
+   transition-delay: 0.2s;
+  
+}
+p{
+  margin-top: 10px;
+}
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="image">
+        <img src="Images/Main.png" alt="">
+      </div>
+      <div class="content">
+        <h3>Introducing Nike</h3>
+        <p>where comfort meets style in every step.
+          Elevate your footwear collection with 
+         our meticulously crafted shoes designed
+          for the modern lifestyle. Whether you're 
+          navigating city streets.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
